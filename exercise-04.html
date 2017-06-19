@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Change Request - jQuery DOM Manipulation</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<script>
+		$(document).ready(function() {
+			function buttonRemovalFunction() {
+				// Implement the click handler here for button of class 'remove'
+				var parentDiv = $('.picture-element');
+				for (var i = 0; i < parentDiv.length; i++) {
+					$(parentDiv[i]).click(function() {
+						$(this).slideUp();
+						//in place of jQuery animation i can add transform class with transition proerty and add this class to current
+						//parent div to apply CSS
+					});
+				}
+
+			} // end of buttonRemovalFunction
+
+			buttonRemovalFunction();
+
+		}); //End of document ready function
+	</script>
+</head>
+
+<body>
+	<p>When I click a button the parent div and everything inside must be removed. I also want this animated with CSS3 transitions.</p>
+
+	<div class="picture-element">
+		<img src="https://www.digitaslbi.com/globalassets/offices/europe/london/london_thumb2.png" alt="First">
+		<button class="remove">X</button>
+	</div>
+
+	<div class="picture-element">
+		<img src="https://www.digitaslbi.com/globalassets/offices/europe/madrid/madrid_thumb2.png" alt="Second">
+		<button class="remove">X</button>
+	</div>
+
+</body>
+
+</html>
