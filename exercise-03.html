@@ -11,20 +11,15 @@
 				// Implement the function here.
 
 			//}
-
 			function groceryItems(item){
-				var speciesCount = $('li');
-				console.log(speciesCount);
-				for(var i=0; i<speciesCount.length; i++){
-					console.log(speciesCount[i]);
-				}
+				var speciesCount = $("li[data-species=" + item + "]").text();
+				return speciesCount;
 			}
 
-			console.log(groceryItems());
+			console.log(groceryItems('Dal'));
 		});
 
-		//WIP not done
-		
+
 	</script>
 </head>
 
